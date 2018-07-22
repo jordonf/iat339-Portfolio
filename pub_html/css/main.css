@@ -1,0 +1,10 @@
+.text-link-1 {
+  text-decoration: none;
+  color: #2A191E;
+  transition: ease 0.3s;
+}
+
+.text-link-1:hover {
+text-decoration: underline;
+text-decoration-color: #68110D;
+}
