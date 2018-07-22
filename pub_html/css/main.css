@@ -1,10 +1,116 @@
-.text-link-1 {
-  text-decoration: none;
-  color: #2A191E;
-  transition: ease 0.3s;
+*{
+  box-sizing: border-box;
+  font-family: 'Raleway';
 }
 
-.text-link-1:hover {
-text-decoration: underline;
-text-decoration-color: #68110D;
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer{
+  background-color: #E2E1CF;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-container{
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.7em 0em;
+}
+
+.footer-block{
+  flex-basis: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-block ul li {
+  flex-basis: 33%;
+  margin: 0 2em;
+}
+
+.footer-refs{
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.heading-1 {
+  font-family: 'Work Sans';
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #660000;
+}
+
+.heading-2 {
+  font-family: 'Work Sans';
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+  font-family: 'Work Sans';
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+.paragraph-text {
+  font-family: 'Raleway';
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+}
+
+.text-link-1 {
+  position: relative;
+  color: #2A191E;
+  text-decoration: none;
+}
+
+.text-link-1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #2A191E;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.text-link-1:hover::before, .text-link-1:focus::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+a>i {
+  color: #2A191E;
+  transition: ease-in-out 0.2s;
+}
+
+a>i:hover {
+  color: #660000;
 }
