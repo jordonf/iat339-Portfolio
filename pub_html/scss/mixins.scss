@@ -1,12 +1,5 @@
-@mixin flxCen {
+@mixin flexBase{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-@mixin flxCnSpA{
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }

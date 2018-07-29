@@ -15,8 +15,8 @@ ul {
 
 footer {
   background-color: #FFFDFD;
-  @include flxCen;
-
+  @include flexBase;
+  justify-content: center;
   span {
     margin-left: 1em;
     margin-right: 1em;
@@ -33,17 +33,31 @@ footer {
 
 .footer-container {
   flex-basis: 100%;
-  @include flxCen;
+  @include flexBase;
+  justify-content: center;
 }
 
 .footer-refs {
   flex-basis: 100%;
-  @include flxCen;
+  @include flexBase;
+  justify-content: center;
   padding: 1em 2em;
 
   li {
     margin: 0 5em;
   }
+}
+
+.nav-bar{
+  @include flexBase;
+  li{
+  heading-1{
+    justify-content: flex-start;
+  }
+  heading-2{
+    justify-content: flex-end;
+  }
+}
 }
 
 .heading-1 {
@@ -82,13 +96,15 @@ footer {
   color: $darkGrey;
   position: relative;
   &::before {
-@include underlineBase;
+    @include underlineBase;
     background-color: $brightRed;
   }
+
   &:focus,
   &:hover {
     color: $brightRed;
   }
+
   &:focus::before,
   &:hover::before {
     visibility: visible;
@@ -102,7 +118,7 @@ footer {
   color: $darkGrey;
   text-decoration: none;
   &::before {
-@include underlineBase;
+    @include underlineBase;
     transform-origin: 0 50%;
     background-color: $darkGrey;
   }
