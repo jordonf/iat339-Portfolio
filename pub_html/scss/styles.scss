@@ -1,6 +1,6 @@
-@import 'normalize.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
 
 * {
   box-sizing: border-box;
@@ -17,6 +17,7 @@ footer {
   background-color: #FFFDFD;
   @include flexBase;
   justify-content: center;
+
   span {
     margin-left: 1em;
     margin-right: 1em;
@@ -48,16 +49,19 @@ footer {
   }
 }
 
-.nav-bar{
+.nav-bar {
   @include flexBase;
-  li{
-  heading-1{
-    justify-content: flex-start;
+  justify-content: center;
+  .nav-item{
+    padding: 1em 0.8em;
+    &:first-child{
+        flex-basis: 66%;
+    }
   }
-  heading-2{
-    justify-content: flex-end;
+  .heading-2 {
+    flex-basis: 10%;
+    white-space: nowrap;
   }
-}
 }
 
 .heading-1 {
@@ -95,6 +99,7 @@ footer {
   text-decoration: none;
   color: $darkGrey;
   position: relative;
+
   &::before {
     @include underlineBase;
     background-color: $brightRed;
@@ -117,11 +122,13 @@ footer {
   position: relative;
   color: $darkGrey;
   text-decoration: none;
+
   &::before {
     @include underlineBase;
     transform-origin: 0 50%;
     background-color: $darkGrey;
   }
+
   &:focus::before,
   &:hover::before {
     visibility: visible;
