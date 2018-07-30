@@ -1,10 +1,12 @@
-@mixin flexBase{
+@mixin flexBase {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -moz-flex;
   align-items: center;
   flex-wrap: wrap;
 }
-
-@mixin underlineBase{
+@mixin underlineBase {
   content: "";
   position: absolute;
   width: 100%;
@@ -15,5 +17,33 @@
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition:all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
+}
+@mixin justCenter {
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  -moz-justify-content:center;
+}
+
+@mixin justSpArd{
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -moz-justify-content:space-around;
+}
+
+@mixin flxBsAccess($amt){
+  flex-basis: $amt;
+  -webkit-flex-basis: $amt;
+  -ms-flex-basis: $amt;
+  -moz-flex-basis: $amt;
+}
+
+@mixin flxWrap($wrapStyle){
+  -webkit-flex-wrap:$wrapStyle;
+  -ms-flex-wrap:$wrapStyle;
+  -moz-flex-wrap:$wrapStyle;
 }
