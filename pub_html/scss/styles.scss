@@ -30,13 +30,15 @@ footer {
   h2 {
     color: $darkRed;
   }
+
   .footer-container {
-      @include flxBsAccess(100%);
+    @include flxBsAccess(100%);
     @include flexBase;
     justify-content: center;
   }
+
   .footer-refs {
-      @include flxBsAccess(100%);
+    @include flxBsAccess(100%);
     @include flexBase;
     justify-content: center;
     padding: 1em 2em;
@@ -53,17 +55,19 @@ footer {
   position: fixed;
   width: 100vw;
   flex-flow: row;
-  -webkit-flex-flow:row;
-  -moz-flex-flow:row;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+
   li {
     padding: 1em 0.8em;
+
     &:first-child {
-        @include flxBsAccess(66%);
+      @include flxBsAccess(66%);
     }
   }
 
   .heading-2 {
-      @include flxBsAccess(10%);
+    @include flxBsAccess(10%);
     white-space: nowrap;
   }
 }
@@ -178,10 +182,10 @@ footer {
 .img-cont-hzntl {
   background-color: transparentize($darkGrey, 0.9);
   @include flexBase;
-@include justCenter;
+  @include justCenter;
 
   .img-block-left {
-      @include flxBsAccess(50%);
+    @include flxBsAccess(50%);
     margin: auto;
 
     img {
@@ -194,7 +198,7 @@ footer {
   }
 
   .img-block-right {
-      @include flxBsAccess(50%);
+    @include flxBsAccess(50%);
     margin: auto;
 
     img {
@@ -213,7 +217,7 @@ footer {
   justify-content: center;
 
   .img-block-2 {
-      @include flxBsAccess(100%);
+    @include flxBsAccess(100%);
     @include flexBase;
     justify-content: center;
     margin-left: 20em;
@@ -237,7 +241,7 @@ footer {
   justify-content: space-around;
 
   p {
-      @include flxBsAccess(40%);
+    @include flxBsAccess(40%);
   }
 }
 
@@ -246,23 +250,26 @@ footer {
   justify-content: space-around;
 
   .intro-cont {
-      @include flxBsAccess(100%);
+    @include flxBsAccess(100%);
     @include flexBase;
-    &:first-child{
+
+    &:first-child {
       justify-content: center;
     }
+
     .intro-block {
-        @include flxBsAccess(40%);
+      @include flxBsAccess(40%);
       margin-left: 10em;
 
       .team-list {
         @include flexBase;
 
         .team-item {
-            @include flxBsAccess(30%);
+          @include flxBsAccess(30%);
           margin: 1em 0;
         }
-        .list-2{
+
+        .list-2 {
           @include flxBsAccess(40%);
           margin: 1em 0;
         }
@@ -271,19 +278,20 @@ footer {
   }
 }
 
-.bodyDiv{
+.bodyDiv {
   @include flexBase;
   @include flxWrap(wrap);
   min-height: 100vh;
-.body-container {
-  @include flxBsAccess(100%);
-}
-  .footer-div{
+
+  .body-container {
+    @include flxBsAccess(100%);
+  }
+
+  .footer-div {
     @include flxBsAccess(100%);
     align-self: flex-end;
     -webkit-align-self: flex-end;
   }
-
 }
 
 .heroSmall {
@@ -295,7 +303,8 @@ footer {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  h1{
+
+  h1 {
     font-size: 3em;
   }
 }
@@ -329,7 +338,7 @@ footer {
   transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
-  -o-transition:all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
   border-radius: 0.6em;
 
   &:hover {
