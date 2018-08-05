@@ -47,3 +47,15 @@
   -ms-flex-wrap:$wrapStyle;
   -moz-flex-wrap:$wrapStyle;
 }
+@mixin flxflow($flowStyle){
+  -webkit-flex-flow: $flowStyle;
+  -ms-flex-flow: $flowStyle;
+  -moz-flex-flow: $flowStyle;
+}
+@mixin fontstyle($fontfam, $weight, $space, $trans, $size){
+  font-family: $fontfam;
+  font-weight: $weight;
+  letter-spacing: $space;
+  text-transform: $trans;
+  font-size: $size;
+}

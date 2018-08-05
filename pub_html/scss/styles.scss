@@ -54,9 +54,9 @@ footer {
   justify-content: center;
   position: fixed;
   width: 100vw;
-  flex-flow: row;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
+  @include flxflow(row);
+  background-color: #FFFDFD;
+  box-shadow: 0.1px 0.1px 1px 0.1px $darkGrey;
 
   li {
     padding: 1em 0.8em;
@@ -95,64 +95,60 @@ footer {
   h1 {
     transform: translate(-50%, 0);
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 50vw;
   }
 
   h2 {
     transform: translate(-50%, 0);
     position: absolute;
-    top: 60vh;
+    top: 38vh;
     left: 50vw;
-  }
-
-  h3 {
-    color: white;
-    transform: translate(-50%, 0);
-    position: absolute;
-    top: 35vh;
-    left: 50vw;
+    color: $offWhite;
     font-size: 1.4em;
   }
+
+  .index-button-cont {
+    @include flexBase;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 60vh;
+    left: 50vw;
+    a {
+      margin: 1em;
+    }
+  }
+  //
+  // h3 {
+  //   color: white;
+  //   transform: translate(-50%, 0);
+  //   position: absolute;
+  //   top: 35vh;
+  //   left: 50vw;
+  //   font-size: 1.4em;
+  // }
 }
 
 .title-text {
-  font-family: 'Work Sans';
-  font-weight: 600;
-  letter-spacing: 0.8rem;
-  text-transform: uppercase;
-  font-size: 7em;
+  @include fontstyle('Work Sans', 600, 0.8rem, uppercase, 7em);
   color: $brightRed;
 }
 
 .heading-1 {
-  font-family: 'Work Sans';
-  font-weight: 600;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  font-size: 2rem;
+  @include fontstyle('Work Sans', 600, 0.3rem, uppercase, 2rem);
   color: $darkRed;
 }
 
 .heading-2 {
-  font-family: 'Work Sans';
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
+  @include fontstyle('Work Sans', 300, 0.2rem, uppercase, 1rem);
 }
 
 .heading-3 {
-  font-family: 'Work Sans';
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
+  @include fontstyle('Work Sans', 600, 0.1rem, none, 1rem)
 }
 
 .paragraph-text {
-  font-family: 'Raleway';
-  font-weight: 300;
-  letter-spacing: 0.05rem;
-  font-size: 0.9rem;
+  @include fontstyle ('Raleway', 300, 0.05rem, none, 0.9rem);
   text-decoration: none;
 }
 
@@ -296,7 +292,7 @@ footer {
 
 .heroSmall {
   width: 100%;
-  height: 30vh;
+  height: 70vh;
   @include flexBase;
   justify-content: center;
   text-align: center;
@@ -330,20 +326,20 @@ footer {
 
 .button-1 {
   text-decoration: none;
-  color: white;
+  color: $offWhite;
   background-color: rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
-  padding: 1em 2.5em;
+  padding: 1.5em 3em;
   border: solid 2px $darkRed;
   transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
-  border-radius: 0.6em;
+  border-radius: 0.9em;
 
   &:hover {
     background-color: transparentize($brightRed, 0.6);
-    color: white;
+    color: $offWhite;
     text-shadow: 1px 0 0 currentColor;
   }
 }
