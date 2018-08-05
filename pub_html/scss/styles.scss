@@ -15,8 +15,7 @@ ul {
 
 footer {
   background-color: #FFFDFD;
-  @include flexBase;
-  justify-content: center;
+  @include flex(center, center, row, wrap);
 
   span {
     margin-left: 1em;
@@ -33,14 +32,12 @@ footer {
 
   .footer-container {
     @include flxBsAccess(100%);
-    @include flexBase;
-    justify-content: center;
+    @include flex(center, center, row, wrap);
   }
 
   .footer-refs {
     @include flxBsAccess(100%);
-    @include flexBase;
-    justify-content: center;
+    @include flex(center, center, row, wrap);
     padding: 1em 2em;
 
     li {
@@ -50,16 +47,15 @@ footer {
 }
 
 .nav-bar {
-  @include flexBase;
-  justify-content: center;
+  @include flex(center, center, row, wrap);
   position: fixed;
   width: 100vw;
-  @include flxflow(row);
-  background-color: #FFFDFD;
+  background-color: $offWhite;
   box-shadow: 0.1px 0.1px 1px 0.1px $darkGrey;
-
-  li {
+z-index: 1000;
+  .nav-item {
     padding: 1em 0.8em;
+    background-color: $offWhite;
 
     &:first-child {
       @include flxBsAccess(66%);
@@ -109,7 +105,7 @@ footer {
   }
 
   .index-button-cont {
-    @include flexBase;
+    @include flex(flex-start, center, row, wrap);
     position: absolute;
     transform: translate(-50%, 0);
     top: 60vh;
@@ -118,15 +114,6 @@ footer {
       margin: 1em;
     }
   }
-  //
-  // h3 {
-  //   color: white;
-  //   transform: translate(-50%, 0);
-  //   position: absolute;
-  //   top: 35vh;
-  //   left: 50vw;
-  //   font-size: 1.4em;
-  // }
 }
 
 .title-text {
@@ -155,8 +142,7 @@ footer {
 .text-link {
   text-decoration: none;
   color: $darkGrey;
-  position: relative;
-
+position: relative;
   &::before {
     @include underlineBase;
     background-color: $brightRed;
@@ -175,71 +161,6 @@ footer {
   }
 }
 
-.img-cont-hzntl {
-  background-color: transparentize($darkGrey, 0.9);
-  @include flexBase;
-  @include justCenter;
-
-  .img-block-left {
-    @include flxBsAccess(50%);
-    margin: auto;
-
-    img {
-      margin-left: 10em;
-    }
-
-    p {
-      margin-right: 10em;
-    }
-  }
-
-  .img-block-right {
-    @include flxBsAccess(50%);
-    margin: auto;
-
-    img {
-      margin-right: 10em;
-    }
-
-    p {
-      margin-left: 10em;
-    }
-  }
-}
-
-.img-cont-vtcl {
-  background-color: transparentize($darkGrey, 0.6);
-  @include flexBase;
-  justify-content: center;
-
-  .img-block-2 {
-    @include flxBsAccess(100%);
-    @include flexBase;
-    justify-content: center;
-    margin-left: 20em;
-    margin-right: 20em;
-    text-align: center;
-  }
-}
-
-.text-cont-1 {
-  background-color: transparentize($darkRed, 0.9);
-  @include flexBase;
-  justify-content: center;
-  margin-left: 30em;
-  margin-right: 30em;
-  text-align: center;
-}
-
-.text-cont-2 {
-  background-color: transparentize($darkRed, 0.6);
-  @include flexBase;
-  justify-content: space-around;
-
-  p {
-    @include flxBsAccess(40%);
-  }
-}
 
 .intro {
   @include flexBase;
@@ -275,8 +196,7 @@ footer {
 }
 
 .bodyDiv {
-  @include flexBase;
-  @include flxWrap(wrap);
+  @include flex(flex-start, center, row, wrap);
   min-height: 100vh;
 
   .body-container {
@@ -293,8 +213,7 @@ footer {
 .heroSmall {
   width: 100%;
   height: 70vh;
-  @include flexBase;
-  justify-content: center;
+  @include flex(center, center, row, wrap);
   text-align: center;
   background-size: cover;
   background-position: center center;

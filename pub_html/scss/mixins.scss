@@ -1,3 +1,21 @@
+@mixin flex($jstfy, $align, $direction, $wrap) {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+
+  justify-content: $jstfy;
+  -webkit-justify-content: $jstfy;
+  -ms-justify-content: $jstfy;
+  -moz-justify-content: $jstfy;
+
+  align-items: $align;
+  -webkit-align-items: $align;
+
+  -webkit-flex-flow: $direction $wrap;
+  -ms-flex-flow: $direction $wrap;
+  -moz-flex-flow: $direction $wrap;
+}
 @mixin flexBase {
   display: flex;
   display: -webkit-flex;
@@ -18,41 +36,30 @@
   transform: scaleX(0);
   -webkit-transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  -o-transition:all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
 }
 @mixin justCenter {
   justify-content: center;
   -webkit-justify-content: center;
   -ms-justify-content: center;
-  -moz-justify-content:center;
+  -moz-justify-content: center;
 }
-
-@mixin justSpArd{
+@mixin justSpArd {
   justify-content: space-around;
   -webkit-justify-content: space-around;
   -ms-justify-content: space-around;
-  -moz-justify-content:space-around;
+  -moz-justify-content: space-around;
 }
-
-@mixin flxBsAccess($amt){
+@mixin flxBsAccess($amt) {
   flex-basis: $amt;
   -webkit-flex-basis: $amt;
   -ms-flex-basis: $amt;
   -moz-flex-basis: $amt;
 }
 
-@mixin flxWrap($wrapStyle){
-  -webkit-flex-wrap:$wrapStyle;
-  -ms-flex-wrap:$wrapStyle;
-  -moz-flex-wrap:$wrapStyle;
-}
-@mixin flxflow($flowStyle){
-  -webkit-flex-flow: $flowStyle;
-  -ms-flex-flow: $flowStyle;
-  -moz-flex-flow: $flowStyle;
-}
-@mixin fontstyle($fontfam, $weight, $space, $trans, $size){
+
+@mixin fontstyle($fontfam, $weight, $space, $trans, $size) {
   font-family: $fontfam;
   font-weight: $weight;
   letter-spacing: $space;
